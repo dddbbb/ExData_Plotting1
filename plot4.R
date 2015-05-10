@@ -5,7 +5,7 @@ data<-read.table(file = "./household_power_consumption.txt",
                  header = TRUE,
                  sep = ";",
                  colClasses = c("character", "character", rep("numeric",7)),
-                 na = "?")
+                 na.strings = "?")
 
 data<-data[(data$Date == "1/2/2007"|data$Date=="2/2/2007"),]
 data$Time <- paste(data$Date, data$Time)
